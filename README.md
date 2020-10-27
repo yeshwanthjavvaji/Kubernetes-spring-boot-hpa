@@ -124,18 +124,3 @@ You can inspect the event and triggers in the HPA with:
 ```bash
 kubectl get hpa spring-boot-hpa
 ```
-
-## Notes
-
-The configuration for metrics and metrics server is configured to run on minikube only.
-
-**You won't be able to run the same YAML files for metrics and custom metrics server on your cluster or EKS, GKE, AKS, etc.**
-
-Also, there are secrets checked in the repository to deploy the Prometheus adapter.
-
-**In production, you should generate your own secrets and (possibly) not check them into version control.**
-
-If you wish to run metrics and custom metrics server in production, you should check out the following resources:
-
-- [Metrics server](https://github.com/kubernetes-sigs/metrics-server)
-- [How to install Prometheus and the Promtheus Adapter](https://github.com/DirectXMan12/k8s-prometheus-adapter/blob/master/docs/walkthrough.md)
